@@ -1,0 +1,16 @@
+<ion-view title="相关校车班次">
+  <ion-content>
+    <div ng-show="currentUser">
+      <div class="card">
+        <div class="item item-divider">您尚未注册任何班次</div>
+        <div class="item">请联系客服签署服务</div>
+      </div>
+    </div>
+    <div ng-hide="currentUser">
+      <div class="card">
+        <div class="item item-divider">您还没有登录系统</div>
+        <div class="item">请现在注册或登录</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

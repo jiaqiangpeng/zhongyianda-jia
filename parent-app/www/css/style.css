@@ -1,0 +1,50 @@
+/*
+@font-face {
+  font-family: 'MSyahei';
+  src: url('msyh.ttf');
+  src: url('msyh.ttf')  format('truetype');
+}
+*/
+.tour {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+}
+.tour button {
+  transition: opacity 2s ease-in;
+}
+.tour h3{
+  font-family: "heiti", "黑体", sans-serif;
+}
+.tour h2{
+  font-family: "heiti", "黑体", sans-serif;
+  padding-bottom: 20px;
+  color: #FE605F
+}
+.tour .slider {
+  background-color: white;
+
+  height: 100%;
+  padding-top: 60px;
+}
+.tour img {
+  margin-top: 20px;
+  height: 30%;
+  margin-bottom: 40px;
+}
+.comments .button-block {
+  margin: 0;
+}
+.room-service ion-header-bar {
+  margin-top: 44px;
+}
+.room-service ion-content {
+  top: 88px;
+}
+.item.button-block {
+  margin-top: 0;
+  border-radius: 0;
+}

@@ -1,0 +1,9 @@
+<ion-view title="实时视频监控">
+  <ion-content>
+    <div class="card" ng-repeat="player in videoPlayers">
+      <div class="item item-divider">{{player.name}}</div>
+      <jwplayer setup="player.options"></jwplayer>
+      <div ng-if="player.comment" class="item">{{player.comment}}</div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".demo.DemoActivity">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/rtmpTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="请输入rtmp服务器的地址"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/rtmpUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rtmpTxt"/>
+
+        <Button
+            android:id="@+id/connectBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rtmpUrl"
+            android:layout_marginTop="10dp"
+            android:text="准备直播"/>
+
+        <Button
+            android:id="@+id/bubbling_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/connectBT"
+            android:layout_marginTop="10dp"
+            android:text="自动获取地址"/>
+
+        <RadioGroup
+            android:id="@+id/resolution_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bubbling_view"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="240P"/>
+
+            <RadioButton
+                android:id="@+id/radiobutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="360P"/>
+
+            <RadioButton
+                android:id="@+id/radiobutton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="480P"/>
+
+            <RadioButton
+                android:id="@+id/radiobutton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="540P"/>
+
+            <RadioButton
+                android:id="@+id/radiobutton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="720P"/>
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rotation_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resolution_group"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/screenOrientation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="横屏"/>
+
+            <RadioButton
+                android:id="@+id/screenOrientation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="竖屏"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/audio_group"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/rotation_group">
+
+            <CheckBox
+                android:id="@+id/front_camera_mirror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resolution_group"
+                android:checked="false"
+                android:text="前置摄像头镜像"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

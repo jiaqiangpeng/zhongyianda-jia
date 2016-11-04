@@ -1,0 +1,76 @@
+<ion-view title="登录管理">
+  <ion-content>
+    <div ng-show="currentUser">
+      <div class="card">
+        <div class="item item-divider">已经登录：{{currentUser._serverData.mobilePhoneNumber}}</div>
+        <div class="item">未找到您的详细注册信息。请联系客服签署服务。</div>
+        <div class="item-input-inset">
+          <button class="button button-block " ng-click="doLogOut()">
+            退出
+          </button>
+        </div>
+        </div>
+        <!--Logged in-->
+    </div>
+    <div ng-hide="currentUser">
+      <!--Not Logged in -->
+      <div class="card">
+        <div class="item item-divider">登陆系统</div>
+        <div class="item">
+          <div class="item-input-inset">
+            <label class="item item-input item-input-wrapper">
+              <input ng-model="loginForm.phoneNo" type="text" placeholder="手机号">
+            </label>
+            <button class="button button-clear" ng-click="doSendSMS(loginForm)">
+              {{pendingSMSText}}
+            </button>
+          </div>
+          <div class="item-input-inset">
+            <label class="item item-input item-input-wrapper">
+              <input ng-model="loginForm.verificationCode" type="text" placeholder="验证码">
+            </label>
+          </div>
+          <div class="item-input-inset">
+            <button class="button button-block " ng-click="doLogin(loginForm)">
+              登录
+            </button>
+          </div>
+
+          <!--<div>-->
+          <!--<label class="item item-input item-input-wrapper">-->
+          <!--<input type="text" placeholder="手机号" ng-model="loginForm.phoneNo">-->
+          <!--</label>-->
+          <!--<button class="button button-block button-light" ng-click="doSendSMS(loginForm)">-->
+          <!--验证码-->
+          <!--</button>-->
+          <!--</div>-->
+          <!--<label class="item item-input">-->
+          <!--<input type="text" placeholder="名字" ng-model="loginForm.username">-->
+          <!--</label>-->
+          <!--<label class="item item-input">-->
+          <!--<input type="text" placeholder="孩子姓名" ng-model="loginForm.childname">-->
+          <!--</label>-->
+          <!--<button class="button button-block button-assertive" ng-click="doLogin(loginForm)">-->
+          <!--登录-->
+          <!--</button>-->
+          <!--<button ng-show="isRegister" class="button button-block button-assertive" ng-click="doSignup(loginForm)">-->
+          <!--发送验证码登录-->
+          <!--</button>-->
+          <!--<button ng-show="isRegister" class="button button-block button-assertive" ng-click="doSignup(loginForm)">-->
+          <!--注册-->
+          <!--</button>-->
+
+          <!--<button class="button button-block button-outline button-assertive">-->
+          <!--Facebook-->
+          <!--</button>-->
+          <!--<a href="#" ng-show="!isRegister" ng-click="changeLoginModalState(true)">创建账号</a>-->
+          <!--<a href="#" ng-show="isRegister" ng-click="changeLoginModalState(false)">登录</a>-->
+          <div class="item-input-inset" ng-if="lastError">
+            <span>{{lastError}}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>
